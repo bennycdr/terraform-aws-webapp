@@ -5,8 +5,8 @@ resource "aws_instance" "webserver" {
   security_groups         = var.security_groups
 
   tags = {
-    name = var.name
-    environment = var.environment
+    Name = var.name
+    Environment = var.environment
   }
   
   connection {
