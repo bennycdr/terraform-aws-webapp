@@ -3,10 +3,12 @@ resource "aws_instance" "webserver" {
   instance_type           = local.instance_type
   key_name                = var.key_name
   security_groups         = var.security_groups
+
   tags = {
     name = var.name
     environment = var.environment
   }
+  
   connection {
     type     = "ssh"
     user     = "ec2-user"
