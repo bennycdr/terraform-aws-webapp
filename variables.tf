@@ -3,6 +3,11 @@ variable "name" {
   default = "nginx-webapp"
   description = "Name of the EC2 Instance"
 }
+variable "owner" {
+  type = string
+  default = "ACME Team"
+  description = "Owner of the EC2 Instance"
+}
 variable "size" {
   type = string
   description = "small, medium or large"
@@ -17,7 +22,7 @@ variable "environment" {
   default = "Production"
   description = "production, staging, development"
 }
-variable "EC2-Token" {
+variable "ec2-token" {
   type = string
   description = "private key to access EC2 Instance"
 }

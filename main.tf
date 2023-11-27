@@ -7,13 +7,14 @@ resource "aws_instance" "webserver" {
   tags = {
     Name = var.name
     Environment = var.environment
+    owner = var.owner
   }
   
   connection {
     type     = "ssh"
     user     = "ec2-user"
     host     = self.public_ip
-    private_key = var.EC2-Token
+    private_key = var.ec2-token
   }
 
   provisioner "remote-exec" {
